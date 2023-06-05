@@ -14,6 +14,8 @@ while (!day.isAfter(endDay)) {
   day.add(1, 'd');
 }
 
+console.log(calendar);
+
 function App() {
   return (
     <div className="App">
