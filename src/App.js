@@ -13,7 +13,6 @@ while (!day.isAfter(endDay)) {
   calendar.push(day.clone());
   day.add(1, 'd');
 }
-
 console.log(calendar);
 
 function App() {
