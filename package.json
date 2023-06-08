@@ -2,8 +2,8 @@
   "name": "notes-app",
   "version": "1.0.0",
   "description": "",
+  "homepage": "http://karen0185.github.io/notes-app/",
   "main": "index.js",
-  "homepage": "https://Karen0185.github.io/notes-app",
   "scripts": {
     "start": "webpack server --open",
     "build": "webpack --mode production",
