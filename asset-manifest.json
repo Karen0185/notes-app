@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/notes-app/static/css/main.9d289640.css",
-    "main.js": "/notes-app/static/js/main.eb9a0890.js",
-    "static/js/787.9243050f.chunk.js": "/notes-app/static/js/787.9243050f.chunk.js",
-    "static/media/logo.svg": "/notes-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/notes-app/static/css/main.1070ead6.css",
+    "main.js": "/notes-app/static/js/main.aa1e9050.js",
+    "static/js/496.6bb7d5e2.chunk.js": "/notes-app/static/js/496.6bb7d5e2.chunk.js",
     "index.html": "/notes-app/index.html",
-    "main.9d289640.css.map": "/notes-app/static/css/main.9d289640.css.map",
-    "main.eb9a0890.js.map": "/notes-app/static/js/main.eb9a0890.js.map",
-    "787.9243050f.chunk.js.map": "/notes-app/static/js/787.9243050f.chunk.js.map"
+    "main.1070ead6.css.map": "/notes-app/static/css/main.1070ead6.css.map",
+    "main.aa1e9050.js.map": "/notes-app/static/js/main.aa1e9050.js.map",
+    "496.6bb7d5e2.chunk.js.map": "/notes-app/static/js/496.6bb7d5e2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d289640.css",
-    "static/js/main.eb9a0890.js"
+    "static/css/main.1070ead6.css",
+    "static/js/main.aa1e9050.js"
   ]
 }
