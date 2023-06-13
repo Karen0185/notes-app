@@ -1,12 +1,26 @@
 import { createStore } from 'redux';
 
 const store = createStore((state, action) => {
-    if(action.type === 'EDIT-USER-NAME') {
+    if(action.type === 'ADD-NEW-USER') {
         return {
             ...state,
-            user: {
-                name: action.payload.name
-            }
+            users: [
+                {
+                    id: Math.random() * 100,
+                    userName: action.payload.userName,
+                    password: action.payload.password,
+                },
+                ...state.users
+            ]
+        }
+    }
+
+    if(action.type === 'SET-CURRENT-USER') {
+        return {
+            ...state,
+            currentUser: {
+                    user: action.payload.user
+                }
         }
     }
 
@@ -18,7 +32,14 @@ const store = createStore((state, action) => {
             userName: 'Karen0198',
             password: 'karen1998'
         }
-    ]
+    ],
+
+    currentUser: {
+        user: {
+            userName: 'Karen0198',
+            password: 'karen1998'
+        }
+    }
 })
 
 export default store;

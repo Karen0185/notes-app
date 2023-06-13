@@ -3,6 +3,7 @@ import WebFont from 'webfontloader';
 import './App.css';
 import Login from './components/login';
 import { useEffect } from 'react';
+import AppPage from './components/AppPage';
 
 function App() {
 
@@ -13,13 +14,20 @@ function App() {
       }
     });
   })
-  
+
+  const currentUser = useSelector((state) => {
+      return state.currentUser
+  })
+
   const dispatch = useDispatch()
-  
 
   return (
     <div className="App">
-      <Login />
+      <div className="container">
+        {
+          currentUser.user ? <AppPage/> : <Login />
+        }
+      </div>
     </div>
   );
 }
