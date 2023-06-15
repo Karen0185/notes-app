@@ -20,6 +20,7 @@ const CalendarPage = () => {
     const prevHandler = () => {setToday(prev => prev.clone().subtract(1, 'month'))};
     const todayHandler = () => {setToday(moment())};
     const nextHandler = () => {setToday(prev => prev.clone().add(1, 'month'))};
+    
     return(
         <div className="CalendarPage">
             <div className="wrapper">
