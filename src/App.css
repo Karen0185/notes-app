@@ -37,3 +37,7 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.flex {
+  display: flex;
+}
