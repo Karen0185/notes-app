@@ -1,20 +1,16 @@
 import React from 'react';
 import moment from 'moment';
 
-const DatetimeInput = ({ value, onChange, setDate, setTime }) => {
-  const dateFormat = 'YYYY-MM-DDTHH:mm';
-
+const DatetimeInput = ({ selectedDate, onChange }) => {
   const handleChange = (e) => {
-    const selectedDate = moment(e.target.value, dateFormat);
+    const selectedDate = moment(e.target.value);
     onChange(selectedDate);
-    setDate(selectedDate.format('DD.MM.YYYY'))
-    setTime(selectedDate.format('HH:mm'))
   };
 
   return (
     <input
       type="datetime-local"
-      value={value.format(dateFormat)}
+      value={selectedDate.format('YYYY-MM-DDTHH:mm')}
       onChange={handleChange}
     />
   );

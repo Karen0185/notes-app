@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../assets/styles/AppPage.css'
 import CalendarPage from './CalendarPage';
 import RightBar from './RightBar';
+import moment from 'moment/moment';
 
 const AppPage = () => {
 
@@ -15,6 +16,7 @@ const AppPage = () => {
                     <div className="user_name">Karen0198</div>
                     <button className='add_note' onClick={() => {
                         document.querySelector('.AddEvent').classList.remove('close') 
+                        
                     }}>Добавить</button>
                     <button className="view_all">Посмотреть все</button>
                 </div>
@@ -24,8 +26,12 @@ const AppPage = () => {
                 </div>
             </div>
             <div className="flex">
-                <CalendarPage setThisDayEvents={setThisDayEvents} setThisDay={setThisDay}/>
-                <RightBar thisDayEvents={thisDayEvents} thisDay={thisDay}/>
+                <CalendarPage
+                setThisDayEvents={setThisDayEvents}
+                setThisDay={setThisDay}
+                thisDay={thisDay}
+                />
+                <RightBar thisDayEvents={thisDayEvents} thisDay={thisDay} />
             </div>
         </div>
     );

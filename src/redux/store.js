@@ -35,7 +35,7 @@ const store = createStore((state, action) => {
                     text: action.payload.text,
                     date: action.payload.date,
                     time: action.payload.time,
-                    bgColor: action.payload.bgColor
+                    bgColor: action.payload.bgColor ? action.payload.bgColor : "#FF4EED"
 
                 }
             ]
@@ -60,6 +60,7 @@ const store = createStore((state, action) => {
     },
 
     events: [
+        
     ]
 })
 

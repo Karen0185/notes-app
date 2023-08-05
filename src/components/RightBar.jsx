@@ -10,16 +10,16 @@ const RightBar = ({thisDayEvents, thisDay}) => {
     const allEvents = useSelector((state) => {
         return state.events
     })
-
-    const upcomingEvents = [...Array(7)].map((_, index) => ({
-        event: allEvents.filter((item) => item.date === moment().add(index, 'day').clone().format('DD.MM.YYYY'))
-      }));
-
-    const todayEvents = allEvents.filter((item) => item.date === moment().format('DD.MM.YYYY'));
-
-    console.log(thisDayEvents)
-    console.log(thisDay)
     
+    const upcomingEvents = [...Array(7)].map((_, index) => {
+        return {
+          event: allEvents.filter(
+            (item) => item.date === moment().add(index, 'day').clone().format('DD.MM.YYYY')
+          )
+        };
+      });
+      const todayEvents = allEvents.filter((item) => item.date === moment().format('DD.MM.YYYY'));
+
     return(
         <div className="RightBar">
             {
@@ -58,7 +58,7 @@ const RightBar = ({thisDayEvents, thisDay}) => {
                         {
                             isUpcomingEvents ? 
                             upcomingEvents.map((item) =>
-                            item.event.length > 1 ? (
+                            item.event.length > 0 ? (
                                 item.event.map((item) => (
                                 <div className='event' style={{ backgroundColor: item.bgColor }} key={item.id}>
                                     <div className="event-top">

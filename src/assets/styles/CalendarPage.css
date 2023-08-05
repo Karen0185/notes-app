@@ -97,14 +97,6 @@
     width: 75%;
 }
 
-.today-events .event-item:nth-child(2),
-.today-events .event-item:nth-child(4) {
-    /* display: none; */
-}
-
-.today-events .event-item:first-child span {
-    display: none;
-}
 
 .today-events  span {
     position: absolute;
@@ -176,7 +168,9 @@
 .popup {
     width: 200px;
     height: 250px;
+    overflow-y: auto;
     opacity: 0;
+    pointer-events: none;
     position: absolute;
     right: -220px;
     border-radius: 10px;
@@ -187,6 +181,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 20;
 }
 
 .calendar_item-popup:hover {
@@ -195,6 +190,7 @@
 
 .calendar_item-popup > .popup {
     opacity: 1;
+    pointer-events: all;
 }
 
 button {
