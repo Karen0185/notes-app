@@ -109,13 +109,13 @@ const CalendarPage = ({ setThisDayEvents, setThisDay, thisDay }) => {
                 setThisDay(item.format('DD-MM-YYYY'));
                 document.querySelector('.RightBar').style.zIndex = 1;
               }}
-              // onWheel={(e) => {
-              //   document.querySelector('.popup').classList.remove('show');
-              //   e.target.classList.remove('calendar_item-popup');
-              //   document.querySelector('.blur').style.opacity = 0;
-              //   document.querySelector('.blur').style.transform = 'scale(.9)';
-              //   document.querySelector('.RightBar').style.zIndex = 4;
-              // }}
+              onWheel={(e) => {
+                document.querySelector('.popup').classList.remove('show');
+                e.target.classList.remove('calendar_item-popup');
+                document.querySelector('.blur').style.opacity = 0;
+                document.querySelector('.blur').style.transform = 'scale(.9)';
+                document.querySelector('.RightBar').style.zIndex = 4;
+              }}
             >
               {item.format('D')}
               {toDayEvents[idx] && (
