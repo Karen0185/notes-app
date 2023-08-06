@@ -6,8 +6,8 @@
 
 .App {
   
-  background-color: #282828;
   background-color: #1C1D1F;
+  overflow: hidden;
 
 }
 

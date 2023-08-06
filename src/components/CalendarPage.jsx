@@ -101,10 +101,13 @@ const CalendarPage = ({ setThisDayEvents, setThisDay, thisDay }) => {
               onClick={(e) => {
                 document.querySelectorAll('.calendar-item').forEach((item) => {
                   item.classList.remove('calendar_item-popup');
+                  item.classList.remove('active')
                 });
-                e.target.classList.add('calendar_item-popup');
+                  e.target.classList.add('active')
+                  e.target.classList.add('calendar_item-popup');
                 document.querySelector('.blur').style.opacity = 1;
                 document.querySelector('.blur').style.transform = 'scale(1)';
+                document.querySelector('.blur').style.pointerEvents = 'none';
                 // setThisDayEvents(toDayEvents[idx]);
                 setThisDay(item.format('DD-MM-YYYY'));
                 document.querySelector('.RightBar').style.zIndex = 1;
@@ -112,6 +115,7 @@ const CalendarPage = ({ setThisDayEvents, setThisDay, thisDay }) => {
               onWheel={(e) => {
                 document.querySelector('.popup').classList.remove('show');
                 e.target.classList.remove('calendar_item-popup');
+                document.querySelector('.blur').style.pointerEvents = 'all';
                 document.querySelector('.blur').style.opacity = 0;
                 document.querySelector('.blur').style.transform = 'scale(.9)';
                 document.querySelector('.RightBar').style.zIndex = 4;
@@ -129,6 +133,7 @@ const CalendarPage = ({ setThisDayEvents, setThisDay, thisDay }) => {
                         document.querySelector('.popup').classList.add('show');
                         e.target.parentElement.parentElement.classList.add('calendar_item-popup');
                         document.querySelector('.blur').style.opacity = 1;
+                        document.querySelector('.blur').style.pointerEvents = 'none';
                         document.querySelector('.blur').style.transform = 'scale(1)';
                       }}
                     >
@@ -151,8 +156,7 @@ const CalendarPage = ({ setThisDayEvents, setThisDay, thisDay }) => {
                     document.querySelector('.blur').style.transform = 'scale(.9)';
                     document.querySelector('.popup').classList.remove('show');
                     e.target.classList.remove('calendar_item-popup');
-                    document.querySelector('.blur').style.opacity = 0;
-                    document.querySelector('.blur').style.transform = 'scale(.9)';
+                    document.querySelector('.blur').style.pointerEvents = 'none';
                   }}
                 >
                   Добавить
