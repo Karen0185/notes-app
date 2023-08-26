@@ -1,10 +1,12 @@
 import React from 'react';
 import moment from 'moment';
 
-const DatetimeInput = ({ selectedDate, onChange }) => {
+const DatetimeInput = ({ setThisDay, thisDay, selectedDate, onChange }) => {
   const handleChange = (e) => {
     const selectedDate = moment(e.target.value);
     onChange(selectedDate);
+    setThisDay(selectedDate); // Обновляем состояние даты в CalendarPage
+    console.log(selectedDate.format('YYYY-MM-DDTHH:mm'));
   };
 
   return (
@@ -15,5 +17,6 @@ const DatetimeInput = ({ selectedDate, onChange }) => {
     />
   );
 };
+
 
 export default DatetimeInput;
