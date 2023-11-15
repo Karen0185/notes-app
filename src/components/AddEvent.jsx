@@ -92,25 +92,25 @@ const AddEvent = ({ thisDay, setThisDay, selectedDate, setSelectedDate}) => {
 
     let text = document.querySelector('.header_text').innerHTML = e.target.value
     if(text.includes('понедельник')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' понедельник')[0]} <span>понедельник</span> ${e.target.value.split(' понедельник')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' понедельник')[0]} <span>понедельник ( ${moment().day(1).format('DD.MM')} )</span> ${e.target.value.split(' понедельник')[1]}`
     } else if(text.includes('вторник')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' вторник')[0]} <span>вторник</span> ${e.target.value.split(' вторник')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' вторник')[0]} <span>вторник ( ${moment().day(2).format('DD.MM')} )</span> ${e.target.value.split(' вторник')[1]}`
     } else if(text.includes('среду')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' среду')[0]} <span>среду</span> ${e.target.value.split(' среду')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' среду')[0]} <span>среду ( ${moment().day(3).format('DD.MM')} )</span> ${e.target.value.split(' среду')[1]}`
     } else if(text.includes('четверг')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' четверг')[0]} <span>четверг</span> ${e.target.value.split(' четверг')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' четверг')[0]} <span>четверг ( ${moment().day(4).format('DD.MM')} )</span> ${e.target.value.split(' четверг')[1]}`
     } else if(text.includes('пятницу')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split('пятницу')[0]} <span>пятницу</span> ${e.target.value.split(' пятницу')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split('пятницу')[0]} <span>пятницу ( ${moment().day(5).format('DD.MM')} )</span> ${e.target.value.split(' пятницу')[1]}`
     } else if(text.includes('субботу')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' субботу')[0]} <span>субботу</span> ${e.target.value.split(' субботу')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' субботу')[0]} <span>субботу ( ${moment().day(6).format('DD.MM')} )</span> ${e.target.value.split(' субботу')[1]}`
     } else if(text.includes('воскресение')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' воскресение')[0]} <span>воскресение</span> ${e.target.value.split(' воскресение')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' воскресение')[0]} <span>воскресение ( ${moment().day(7).format('DD.MM')} )</span> ${e.target.value.split(' воскресение')[1]}`
     } else if(text.includes('сегодня')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' сегодня')[0]} <span>сегодня</span> ${e.target.value.split(' сегодня')[1]}`
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' сегодня')[0]} <span>сегодня ( ${moment().day(8).format('DD.MM')} )</span> ${e.target.value.split(' сегодня')[1]}`
     } else if(text.includes('завтра')) {
-      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' завтра')[0]} <span>завтра</span> ${e.target.value.split(' завтра')[1]}`
-    }
-
+      document.querySelector('.header_text').innerHTML = `${e.target.value.split(' завтра')[0]} <span>завтра ( ${moment().add(1, 'days').format('DD.MM')} )</span> ${e.target.value.split(' завтра')[1]}`
+    } 
+    
     setNewHeader(e.target.value);
   };
  
