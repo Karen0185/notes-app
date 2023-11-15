@@ -10,7 +10,6 @@ const AppPage = () => {
     const [thisDay, setThisDay] = useState();
     const [currentEvent, setCurrentEvent] = useState()
 
-
     return(
         <div className="AppPage">
             <div className="top_bar">
