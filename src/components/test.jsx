@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 const CalendarPage = () => {
   const [today, setToday] = useState(moment());
   const [toDayEvents, setToDayEvents] = useState([]);
-
   const isWeekend = true;
   const months = [
     'Январь',
