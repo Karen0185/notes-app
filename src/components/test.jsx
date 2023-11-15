@@ -23,6 +23,8 @@ const CalendarPage = () => {
     'Декабрь',
   ];
 
+  // fggf
+
   const isSelectedMonth = (day) => today.isSame(day, 'month');
   const day = today.clone().startOf('month').startOf('week').subtract(0, 'day');
   const calendar = [...Array(35)].map(() => day.add(1, 'day').clone());
