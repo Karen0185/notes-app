@@ -118,6 +118,7 @@
     height: 25px;
     text-transform: capitalize;
     color: #fff !important;
+    overflow: hidden;
 }
 
 .today-events .event-item:hover {
@@ -268,3 +269,66 @@ button:hover {
     background-color: #272626;
     color: #fff;
 }
+
+@media screen and (max-width: 1170px) {
+    .calendar {
+        height: 560px;
+    }
+
+    .calendar-item {
+        height: 80px;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .calendar {
+        height: 480px;
+    }
+
+    .calendar-item {
+        height: 70px;
+        border-radius: 5px;
+    }
+    .CalendarPage h1 {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .CalendarPage h1 {
+        font-size: 32px;
+    }
+
+    .event-item {
+        display: none !important;
+    }
+    .today-events span {
+        top: 15px;
+        background-color: #fff;
+        color: #333;
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .change-month > .prev-month, .change-month > .next-month {
+        width: 40px;
+    }
+
+    .change-month button { 
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .CalendarPage h1 {
+        font-size: 28px;
+    }
+}
+
+

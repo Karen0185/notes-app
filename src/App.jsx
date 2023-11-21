@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import './App.css';
 import Login from './components/login';
 import AppPage from './components/AppPage';
+import './App.css';
 
 function App() {
 

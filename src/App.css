@@ -41,3 +41,21 @@ button {
 .flex {
   display: flex;
 }
+
+@media screen and (max-width: 1024px) {
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .container {
+    align-items: baseline;
+    padding-top: 50px;
+    height: max-content;
+  }
+
+  .App {
+    overflow-y: visible;
+  }
+
+}

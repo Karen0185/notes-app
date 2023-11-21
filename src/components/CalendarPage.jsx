@@ -11,6 +11,11 @@ const CalendarPage = ({ setThisDay, thisDay, currentEvent, setCurrentEvent }) =>
   const [today, setToday] = useState(moment());
   const [toDayEvents, setToDayEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState();
+  const [isTableSize, setIsTableSize] = useState(false)
+
+   useEffect(() => {
+    setIsTableSize(!isTableSize)
+   }, [])
 
   const isWeekend = true;
   const months = [
@@ -155,7 +160,10 @@ const CalendarPage = ({ setThisDay, thisDay, currentEvent, setCurrentEvent }) =>
                       {event.header.length > 7 ? event.header.slice(0, 7) : event.header}
                     </p>
                   ))}
-                  {toDayEvents[idx].length > 2 && <span>+{toDayEvents[idx].length - 2}</span>}
+                  
+                  {
+                    isTableSize ? toDayEvents[idx].length > 0 && <span>{toDayEvents[idx].length}</span> : toDayEvents[idx].length > 2 && <span>+{toDayEvents[idx].length - 2}</span>
+                  }
                 </div>
               )}
               <div className='popup'

@@ -14,7 +14,6 @@ const AppPage = () => {
         <div className="AppPage">
             <div className="top_bar">
                 <div className="top_bar-left">
-                    <div className="user_name">Karen0198</div>
                     <button className='add_note' onClick={() => {
                         document.querySelector('.AddEvent').classList.remove('close') 
                     }}>Добавить</button>
@@ -27,7 +26,7 @@ const AppPage = () => {
                 </div>
                 <div className="top_bar-right">
                     <input type="text" placeholder="Поиск" className="search-notes" />
-                    <button>Выйти</button>
+                    <button>Поиск</button>
                 </div>
             </div>
             <div className="flex">

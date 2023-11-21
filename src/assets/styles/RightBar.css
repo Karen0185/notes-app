@@ -106,3 +106,34 @@ h1 {
     margin-left: 10px;
 }
 
+
+
+@media screen and (max-width: 1366px) {
+    .RightBar {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .RightBar {
+        width: 30%;
+    }
+
+    .buttons {
+        margin-top: 10px;
+    }
+
+    .buttons button {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .RightBar {
+        width: 100%;
+    }
+}
