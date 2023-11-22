@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #1C1D1F;
+}
+
 .App {
   
   background-color: #1C1D1F;
