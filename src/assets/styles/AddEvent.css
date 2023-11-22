@@ -135,3 +135,20 @@ label {
     color: transparent;
     width: 100%;
 }
+
+@media screen and (max-width: 520px) {
+    .add_event-top {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .add_event-top > .date {
+        margin-top: 15px;
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .add_event-top > .back {
+        margin-left: 0;
+    }
+}

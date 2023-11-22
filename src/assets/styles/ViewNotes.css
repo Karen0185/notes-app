@@ -200,3 +200,17 @@ textarea {
     font-size: 16px;
     height: 100%;
 }
+
+@media screen and (max-width: 520px) {
+    .view_event-left > .back {
+        margin-left: -10px;
+    }
+
+    .view_event-left > button {
+        width: 100px
+    }
+
+    .ViewNotes .wrapper .event {
+        width: 100%;
+    }
+}

@@ -327,8 +327,36 @@ button:hover {
 
 @media screen and (max-width: 520px) {
     .CalendarPage h1 {
-        font-size: 28px;
+        font-size: 18px;
     }
+
+    .calendar {
+        height: 410px;
+    }
+
+    .calendar-item {
+        font-size: 12px;
+        width: 45px;
+    }
+
+    .calendar-item.active {
+        position: absolute;
+        left: 10px;
+    }
+
+    .calendar-item.active  .popup {
+        top: 80px;
+        left: 0;
+    }
+    .change-month>.current-month {
+        width: 70px;
+    }
+
 }
 
 
+@media screen and (max-width: 420px) {
+    .calendar-item {
+        width: 40px;
+    }
+}

@@ -62,7 +62,7 @@
     }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 320px) {
     .top_bar button:nth-child(2) {
         margin-left: 6px;
     }
