@@ -355,7 +355,7 @@ button:hover {
 }
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 410px) {
     .calendar-item {
         width: 40px;
     }
