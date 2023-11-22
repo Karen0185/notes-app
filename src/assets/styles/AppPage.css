@@ -62,11 +62,16 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 520px) {
     .top_bar button:nth-child(2) {
         margin-left: 6px;
     }
     .container {
         width: 90%;
     }
+
+    .searchBtn {
+        width: 60px;
+    }
+
 }

@@ -139,6 +139,7 @@ const AddEvent = ({ thisDay, setThisDay, selectedDate, setSelectedDate}) => {
           <button
             className="add"
             onClick={() => {
+              console.log(newText)
               dispatch({
                 type: 'ADD-NEW-EVENT',
                 payload: {

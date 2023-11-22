@@ -1,14 +1,32 @@
-import { useState } from 'react';
-import '../assets/styles/AppPage.css'
+import { useEffect, useState } from 'react';
 import CalendarPage from './CalendarPage';
 import RightBar from './RightBar';
 import moment from 'moment/moment';
+import { useSelector } from 'react-redux';
+import '../assets/styles/AppPage.css'
 
 const AppPage = () => {
 
     const [thisDayEvents, setThisDayEvents] = useState([]);
     const [thisDay, setThisDay] = useState();
-    const [currentEvent, setCurrentEvent] = useState()
+    const [currentEvent, setCurrentEvent] = useState();
+    const [value, setValue] = useState('');
+    const [searchResult, setSearchResult] = useState()
+
+    const allEvents = useSelector((state) => {
+        return state.events
+    })
+
+    const handleInput = (e) => {
+        setValue(e.target.value);
+    }
+
+    useEffect(() => {
+        const result = allEvents.filter((event) => event.date === value || event.header === value || event.text == value || event.time === value);
+        setSearchResult(result)
+        console.log(result);
+    }, [value])
+
 
     return(
         <div className="AppPage">
@@ -25,8 +43,8 @@ const AppPage = () => {
                     >Посмотреть все</button>
                 </div>
                 <div className="top_bar-right">
-                    <input type="text" placeholder="Поиск" className="search-notes" />
-                    <button>Поиск</button>
+                    <input type="text" placeholder="Поиск" className="search-notes"  onInput={handleInput}/>
+                    <button className='searchBtn'>Поиск</button>
                 </div>
             </div>
             <div className="flex">
@@ -39,10 +57,11 @@ const AppPage = () => {
                 setSelectedDate={setThisDay}
                 />
                 <RightBar 
-                thisDayEvents={thisDayEvents}  
+                thisDayEvents={thisDayEvents} 
                 thisDay={thisDay}
                 currentEvent={currentEvent}
                 setCurrentEvent={setCurrentEvent}
+                searchResult={searchResult}
                 />
             </div>
         </div>
